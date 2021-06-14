@@ -3,16 +3,16 @@ namespace App\Models\NewAdmin;
 
 class IpInfoModel 
 {
-    protected $lunaIp;
+    protected $ip;
 
     public function getIp() 
     {
-        return $this->lunaIp;
+        return $this->ip;
     }
 
-    public function setIp($lunaIp) 
+    public function setIp($ip) 
     {
-        $this->lunaIp = $lunaIp;
+        $this->ip = $ip;
         return $this;
     }
 }

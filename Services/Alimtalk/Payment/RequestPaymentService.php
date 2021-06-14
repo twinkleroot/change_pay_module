@@ -20,7 +20,7 @@ class RequestPaymentService implements RequestPaymentServiceInterface
         $this->logger = $container->get('Logger');
         $this->payHistoryRepository = $container->get('PayHistoryRepository');
         try {
-            $this->payHistoryRepository->setDbConnection($container->get('DbConnectionFactory')->create()->getCafe03Db());
+            $this->payHistoryRepository->setDbConnection($container->get('DbConnectionFactory')->create()->getAlimtalkDb());
         } catch(\Exception $e) {
             throw new \Exception("[".$_SERVER['SERVER_NAME']."] [".Util::GetClassName($this)."] [".__FUNCTION__."] : [".Util::GetUserId()."] msg :  ".$e->getMessage(), ResultCode::DB_CONNECTION_ERROR()->__toString());
         }
